@@ -1,6 +1,6 @@
-[submodule "go-test"]
-	path = go-test
+[submodule "receiver"]
+	path = receiver
 	url = https://github.com/go-microservice-test/receiver.git
-[submodule "go-caller"]
-	path = go-caller
+[submodule "caller"]
+	path = caller
 	url = https://github.com/go-microservice-test/caller.git

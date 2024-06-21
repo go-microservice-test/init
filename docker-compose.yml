@@ -3,22 +3,22 @@ version: '3.8'
 services:
   gin-receiver:
     extends:
-      file: ./go-test/docker-compose.yml
+      file: ./receiver/docker-compose.yml
       service: gin-app
 
   go-caller:
     build:
-      context: ./go-caller
+      context: ./caller
       dockerfile: Dockerfile
     ports:
       - "8080:3000"  # mapping container's port 3000 to my 8080
 
   postgres:
     extends:
-      file: ./go-test/docker-compose.yml
+      file: ./receiver/docker-compose.yml
       service: postgres
 
   redis:
     extends:
-      file: ./go-test/docker-compose.yml
+      file: ./receiver/docker-compose.yml
       service: redis
